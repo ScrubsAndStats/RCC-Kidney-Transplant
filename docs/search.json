@@ -32,6 +32,6 @@
     "href": "quarto/index.html#survival-analysis",
     "title": "Renal Cell Carcinoma in Kidney Transplant Recipients",
     "section": "Survival Analysis:",
-    "text": "Survival Analysis:\n\nKaplan-Meier Curves:\n\n\n\n\n\n\n\n\n\n\n\nUnivariable Cox Regression:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nHR1\n95% CI1\np-value\n\n\n\n\nRCC Diagnosis\n\n\n\n\n\n\n\n\n    Pre Transplant\n—\n—\n\n\n\n\n    Post Transplant\n2.78\n0.97, 7.97\n0.058\n\n\n\n1 HR = Hazard Ratio, CI = Confidence Interval"
+    "text": "Survival Analysis:\n\nKaplan-Meier Curves:\nDuring a median follow-up of 4.34 years [IQR: 2.29, 6.69], 19 deaths (21.6%) were observed among patients diagnosed with RCC. Of these, 5 deaths (12.8%) occurred in the pre-transplant group and 14 deaths (28.6%) in the post-transplant group. Kaplan-Meier survival analysis indicated a significantly higher risk of death in post-transplant RCC patients (Log-rank p = 0.047).\n\n\n\n\n\n\n\n\n\n\n\nUnivariable Cox Regression:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nHR1\n95% CI1\np-value\n\n\n\n\nRCC Diagnosis\n\n\n\n\n\n\n\n\n    Pre Transplant\n—\n—\n\n\n\n\n    Post Transplant\n2.78\n0.97, 7.97\n0.058\n\n\n\n1 HR = Hazard Ratio, CI = Confidence Interval"
   }
 ]
