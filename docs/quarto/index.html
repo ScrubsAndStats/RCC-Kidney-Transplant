@@ -84,9 +84,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preamble" id="toc-preamble" class="nav-link active" data-scroll-target="#preamble">Preamble:</a></li>
-  <li><a href="#patient-characteristics-table" id="toc-patient-characteristics-table" class="nav-link" data-scroll-target="#patient-characteristics-table">Patient Characteristics Table:</a></li>
-  <li><a href="#surgery-characteristics-table" id="toc-surgery-characteristics-table" class="nav-link" data-scroll-target="#surgery-characteristics-table">Surgery Characteristics Table:</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary:</a></li>
+  <li><a href="#patient-characteristics" id="toc-patient-characteristics" class="nav-link" data-scroll-target="#patient-characteristics">Patient Characteristics:</a></li>
+  <li><a href="#surgical-characteristics" id="toc-surgical-characteristics" class="nav-link" data-scroll-target="#surgical-characteristics">Surgical Characteristics:</a></li>
+  <li><a href="#survival-analysis" id="toc-survival-analysis" class="nav-link" data-scroll-target="#survival-analysis">Survival Analysis:</a>
+  <ul class="collapse">
+  <li><a href="#kaplan-meier-curves" id="toc-kaplan-meier-curves" class="nav-link" data-scroll-target="#kaplan-meier-curves">Kaplan-Meier Curves:</a></li>
+  <li><a href="#univariable-cox-regression" id="toc-univariable-cox-regression" class="nav-link" data-scroll-target="#univariable-cox-regression">Univariable Cox Regression:</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
@@ -134,41 +139,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preamble" class="level2">
-<h2 class="anchored" data-anchor-id="preamble">Preamble:</h2>
-<ul>
-<li><p><strong>Reference Papers:</strong></p>
-<ul>
-<li><a href="https://www.tandfonline.com/doi/full/10.2217/fon-2019-0397">Eggers at al.&nbsp;(2019)</a></li>
-</ul></li>
-<li><p><strong>Study Objectives:</strong> <em>To be written…</em></p></li>
-<li><p><strong>Data Source:</strong> <em>To be written…</em></p></li>
-<li><p><strong>Patient Sample:</strong> <em>To be written…</em></p></li>
-<li><p><strong>Statistical Analysis:</strong> <em>To be written…</em></p></li>
-<li><p><strong>Software:</strong> All analyses were performed using the R Statistical Language (Version 4.4.1; R Foundation for Statistical Computing, Vienna, Austria)</p></li>
-</ul>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
+<p><strong>Reference Paper:</strong> <a href="https://www.tandfonline.com/doi/full/10.2217/fon-2019-0397">Eggers at al.&nbsp;(2019)</a></p>
+<p><strong>Study Population:</strong></p>
+<p>The dataset included 108 kidney transplant recipients diagnosed with renal cell carcinoma (RCC), consisting of pre-transplant (n = 54) and post-transplant (n = 54) RCC patients. The primary objective was to compare demographic, clinical, and surgical characteristics, as well as survival outcomes between the two patient groups.</p>
+<p><strong>Descriptive Statistics:</strong></p>
+<p>To describe the baseline characteristics and surgical details, we generated tables reporting mean (standard deviation) for continuous variables and counts (percentages) for categorical variables. These tables were stratified by patient groups (pre- and post-transplant RCC) and analyzed using the Wilcoxon rank-sum test for continuous variables and Pearson’s Chi-squared test or Fisher’s exact test for categorical variables.</p>
+<p><strong>Survival Analysis:</strong></p>
+<p>We examined survival times, measured as years from RCC diagnosis to death (or last follow-up for surviving patients), for a subset of patients with available survival data (n = 88). Kaplan-Meier survival curves were plotted for pre- and post-transplant groups to illustrate time-to-event distributions visually. Log-rank tests were used to evaluate differences in survival across groups, providing insight into potential variations in prognosis.</p>
+<p>Additionally, a univariable Cox proportional hazards regression model was applied to assess the hazard of mortality for post-transplant patients compared to pre-transplant patients.</p>
+<p><strong>Limitations:</strong></p>
+<p>The study’s small sample size (n=108) limits statistical power, which may contribute to non-significant p-values observed in some comparisons between pre- and post-transplant RCC patients. This low power increases the chance of Type II errors, meaning that true differences may not reach statistical significance in this analysis. Future studies with larger cohorts are needed to better assess these potential differences and provide more conclusive evidence.</p>
+<p><strong>Software:</strong></p>
+<p>All analyses were conducted using the R Statistical Language (Version 4.4.1; R Foundation for Statistical Computing, Vienna, Austria).</p>
 </section>
-<section id="patient-characteristics-table" class="level2">
-<h2 class="anchored" data-anchor-id="patient-characteristics-table">Patient Characteristics Table:</h2>
+<section id="patient-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="patient-characteristics">Patient Characteristics:</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="lhvqozlcbw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lhvqozlcbw table {
+<div id="towokltiny" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#towokltiny table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lhvqozlcbw thead, #lhvqozlcbw tbody, #lhvqozlcbw tfoot, #lhvqozlcbw tr, #lhvqozlcbw td, #lhvqozlcbw th {
+#towokltiny thead, #towokltiny tbody, #towokltiny tfoot, #towokltiny tr, #towokltiny td, #towokltiny th {
   border-style: none;
 }
 
-#lhvqozlcbw p {
+#towokltiny p {
   margin: 0;
   padding: 0;
 }
 
-#lhvqozlcbw .gt_table {
+#towokltiny .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -194,12 +200,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_caption {
+#towokltiny .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lhvqozlcbw .gt_title {
+#towokltiny .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -211,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#lhvqozlcbw .gt_subtitle {
+#towokltiny .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -223,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#lhvqozlcbw .gt_heading {
+#towokltiny .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -235,13 +241,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_bottom_border {
+#towokltiny .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_col_headings {
+#towokltiny .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -256,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_col_heading {
+#towokltiny .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -276,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#lhvqozlcbw .gt_column_spanner_outer {
+#towokltiny .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -288,15 +294,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#lhvqozlcbw .gt_column_spanner_outer:first-child {
+#towokltiny .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lhvqozlcbw .gt_column_spanner_outer:last-child {
+#towokltiny .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lhvqozlcbw .gt_column_spanner {
+#towokltiny .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -308,11 +314,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#lhvqozlcbw .gt_spanner_row {
+#towokltiny .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lhvqozlcbw .gt_group_heading {
+#towokltiny .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -338,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#lhvqozlcbw .gt_empty_group_heading {
+#towokltiny .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -353,15 +359,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#lhvqozlcbw .gt_from_md > :first-child {
+#towokltiny .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lhvqozlcbw .gt_from_md > :last-child {
+#towokltiny .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lhvqozlcbw .gt_row {
+#towokltiny .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -380,7 +386,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#lhvqozlcbw .gt_stub {
+#towokltiny .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -393,7 +399,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lhvqozlcbw .gt_stub_row_group {
+#towokltiny .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -407,15 +413,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#lhvqozlcbw .gt_row_group_first td {
+#towokltiny .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lhvqozlcbw .gt_row_group_first th {
+#towokltiny .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lhvqozlcbw .gt_summary_row {
+#towokltiny .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -425,16 +431,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lhvqozlcbw .gt_first_summary_row {
+#towokltiny .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_first_summary_row.thick {
+#towokltiny .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lhvqozlcbw .gt_last_summary_row {
+#towokltiny .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -444,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_grand_summary_row {
+#towokltiny .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -454,7 +460,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lhvqozlcbw .gt_first_grand_summary_row {
+#towokltiny .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -464,7 +470,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_last_grand_summary_row_top {
+#towokltiny .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -474,11 +480,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_striped {
+#towokltiny .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lhvqozlcbw .gt_table_body {
+#towokltiny .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -487,7 +493,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_footnotes {
+#towokltiny .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -501,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_footnote {
+#towokltiny .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -510,7 +516,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lhvqozlcbw .gt_sourcenotes {
+#towokltiny .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -524,7 +530,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lhvqozlcbw .gt_sourcenote {
+#towokltiny .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -532,72 +538,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lhvqozlcbw .gt_left {
+#towokltiny .gt_left {
   text-align: left;
 }
 
-#lhvqozlcbw .gt_center {
+#towokltiny .gt_center {
   text-align: center;
 }
 
-#lhvqozlcbw .gt_right {
+#towokltiny .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lhvqozlcbw .gt_font_normal {
+#towokltiny .gt_font_normal {
   font-weight: normal;
 }
 
-#lhvqozlcbw .gt_font_bold {
+#towokltiny .gt_font_bold {
   font-weight: bold;
 }
 
-#lhvqozlcbw .gt_font_italic {
+#towokltiny .gt_font_italic {
   font-style: italic;
 }
 
-#lhvqozlcbw .gt_super {
+#towokltiny .gt_super {
   font-size: 65%;
 }
 
-#lhvqozlcbw .gt_footnote_marks {
+#towokltiny .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lhvqozlcbw .gt_asterisk {
+#towokltiny .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lhvqozlcbw .gt_indent_1 {
+#towokltiny .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lhvqozlcbw .gt_indent_2 {
+#towokltiny .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lhvqozlcbw .gt_indent_3 {
+#towokltiny .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lhvqozlcbw .gt_indent_4 {
+#towokltiny .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lhvqozlcbw .gt_indent_5 {
+#towokltiny .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lhvqozlcbw .katex-display {
+#towokltiny .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lhvqozlcbw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#towokltiny div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -614,8 +620,8 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header gt_col_headings">
 <th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
 <th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Overall</strong><br> N = 108<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Post Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Pre Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Pre Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Post Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
 <th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
 </tr>
 </thead>
@@ -633,39 +639,39 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Female</td>
 <td class="gt_row gt_center" headers="stat_0">25 (23%)</td>
-<td class="gt_row gt_center" headers="stat_1">11 (20%)</td>
-<td class="gt_row gt_center" headers="stat_2">14 (26%)</td>
+<td class="gt_row gt_center" headers="stat_1">14 (26%)</td>
+<td class="gt_row gt_center" headers="stat_2">11 (20%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Male</td>
 <td class="gt_row gt_center" headers="stat_0">58 (54%)</td>
-<td class="gt_row gt_center" headers="stat_1">35 (65%)</td>
-<td class="gt_row gt_center" headers="stat_2">23 (43%)</td>
+<td class="gt_row gt_center" headers="stat_1">23 (43%)</td>
+<td class="gt_row gt_center" headers="stat_2">35 (65%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown/Unspecified</td>
 <td class="gt_row gt_center" headers="stat_0">25 (23%)</td>
-<td class="gt_row gt_center" headers="stat_1">8 (15%)</td>
-<td class="gt_row gt_center" headers="stat_2">17 (31%)</td>
+<td class="gt_row gt_center" headers="stat_1">17 (31%)</td>
+<td class="gt_row gt_center" headers="stat_2">8 (15%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">Age at transplant, y</td>
 <td class="gt_row gt_center" headers="stat_0">54 (12)</td>
-<td class="gt_row gt_center" headers="stat_1">49 (11)</td>
-<td class="gt_row gt_center" headers="stat_2">58 (11)</td>
+<td class="gt_row gt_center" headers="stat_1">58 (11)</td>
+<td class="gt_row gt_center" headers="stat_2">49 (11)</td>
 <td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">Age at RCC, y</td>
 <td class="gt_row gt_center" headers="stat_0">56 (10)</td>
-<td class="gt_row gt_center" headers="stat_1">57 (10)</td>
-<td class="gt_row gt_center" headers="stat_2">55 (11)</td>
+<td class="gt_row gt_center" headers="stat_1">55 (11)</td>
+<td class="gt_row gt_center" headers="stat_2">57 (10)</td>
 <td class="gt_row gt_center" headers="p.value">0.9</td>
 </tr>
 <tr class="odd">
@@ -681,16 +687,16 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Deceased</td>
 <td class="gt_row gt_center" headers="stat_0">75 (69%)</td>
-<td class="gt_row gt_center" headers="stat_1">38 (70%)</td>
-<td class="gt_row gt_center" headers="stat_2">37 (69%)</td>
+<td class="gt_row gt_center" headers="stat_1">37 (69%)</td>
+<td class="gt_row gt_center" headers="stat_2">38 (70%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Living</td>
 <td class="gt_row gt_center" headers="stat_0">33 (31%)</td>
-<td class="gt_row gt_center" headers="stat_1">16 (30%)</td>
-<td class="gt_row gt_center" headers="stat_2">17 (31%)</td>
+<td class="gt_row gt_center" headers="stat_1">17 (31%)</td>
+<td class="gt_row gt_center" headers="stat_2">16 (30%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -707,48 +713,48 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Hypertensive Nephrosclerosis</td>
 <td class="gt_row gt_center" headers="stat_0">32 (30%)</td>
-<td class="gt_row gt_center" headers="stat_1">13 (24%)</td>
-<td class="gt_row gt_center" headers="stat_2">19 (35%)</td>
+<td class="gt_row gt_center" headers="stat_1">19 (35%)</td>
+<td class="gt_row gt_center" headers="stat_2">13 (24%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Diabetic Nephropathy</td>
 <td class="gt_row gt_center" headers="stat_0">20 (19%)</td>
-<td class="gt_row gt_center" headers="stat_1">12 (22%)</td>
-<td class="gt_row gt_center" headers="stat_2">8 (15%)</td>
+<td class="gt_row gt_center" headers="stat_1">8 (15%)</td>
+<td class="gt_row gt_center" headers="stat_2">12 (22%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Glomerular Diseases</td>
 <td class="gt_row gt_center" headers="stat_0">16 (15%)</td>
-<td class="gt_row gt_center" headers="stat_1">10 (19%)</td>
-<td class="gt_row gt_center" headers="stat_2">6 (11%)</td>
+<td class="gt_row gt_center" headers="stat_1">6 (11%)</td>
+<td class="gt_row gt_center" headers="stat_2">10 (19%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unspecified/Other</td>
 <td class="gt_row gt_center" headers="stat_0">14 (13%)</td>
-<td class="gt_row gt_center" headers="stat_1">5 (9.3%)</td>
-<td class="gt_row gt_center" headers="stat_2">9 (17%)</td>
+<td class="gt_row gt_center" headers="stat_1">9 (17%)</td>
+<td class="gt_row gt_center" headers="stat_2">5 (9.3%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Chronic Liver Disease/Hepatorenal Syndrome</td>
 <td class="gt_row gt_center" headers="stat_0">11 (10%)</td>
-<td class="gt_row gt_center" headers="stat_1">4 (7.4%)</td>
-<td class="gt_row gt_center" headers="stat_2">7 (13%)</td>
+<td class="gt_row gt_center" headers="stat_1">7 (13%)</td>
+<td class="gt_row gt_center" headers="stat_2">4 (7.4%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Retransplantation/Graft Failure</td>
 <td class="gt_row gt_center" headers="stat_0">5 (4.6%)</td>
-<td class="gt_row gt_center" headers="stat_1">3 (5.6%)</td>
-<td class="gt_row gt_center" headers="stat_2">2 (3.7%)</td>
+<td class="gt_row gt_center" headers="stat_1">2 (3.7%)</td>
+<td class="gt_row gt_center" headers="stat_2">3 (5.6%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -763,8 +769,8 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Amyloidosis</td>
 <td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
-<td class="gt_row gt_center" headers="stat_1">2 (3.7%)</td>
-<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_2">2 (3.7%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -779,8 +785,8 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Polycystic Kidney Disease</td>
 <td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
-<td class="gt_row gt_center" headers="stat_1">2 (3.7%)</td>
-<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_2">2 (3.7%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -799,27 +805,27 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="surgery-characteristics-table" class="level2">
-<h2 class="anchored" data-anchor-id="surgery-characteristics-table">Surgery Characteristics Table:</h2>
+<section id="surgical-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="surgical-characteristics">Surgical Characteristics:</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="rjvwlcccim" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rjvwlcccim table {
+<div id="snzlysznmw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#snzlysznmw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rjvwlcccim thead, #rjvwlcccim tbody, #rjvwlcccim tfoot, #rjvwlcccim tr, #rjvwlcccim td, #rjvwlcccim th {
+#snzlysznmw thead, #snzlysznmw tbody, #snzlysznmw tfoot, #snzlysznmw tr, #snzlysznmw td, #snzlysznmw th {
   border-style: none;
 }
 
-#rjvwlcccim p {
+#snzlysznmw p {
   margin: 0;
   padding: 0;
 }
 
-#rjvwlcccim .gt_table {
+#snzlysznmw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -845,12 +851,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_caption {
+#snzlysznmw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rjvwlcccim .gt_title {
+#snzlysznmw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -862,7 +868,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#rjvwlcccim .gt_subtitle {
+#snzlysznmw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -874,7 +880,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#rjvwlcccim .gt_heading {
+#snzlysznmw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -886,13 +892,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_bottom_border {
+#snzlysznmw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_col_headings {
+#snzlysznmw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -907,7 +913,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_col_heading {
+#snzlysznmw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -927,7 +933,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#rjvwlcccim .gt_column_spanner_outer {
+#snzlysznmw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -939,15 +945,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#rjvwlcccim .gt_column_spanner_outer:first-child {
+#snzlysznmw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rjvwlcccim .gt_column_spanner_outer:last-child {
+#snzlysznmw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rjvwlcccim .gt_column_spanner {
+#snzlysznmw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -959,11 +965,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#rjvwlcccim .gt_spanner_row {
+#snzlysznmw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rjvwlcccim .gt_group_heading {
+#snzlysznmw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -989,7 +995,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#rjvwlcccim .gt_empty_group_heading {
+#snzlysznmw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1004,15 +1010,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#rjvwlcccim .gt_from_md > :first-child {
+#snzlysznmw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rjvwlcccim .gt_from_md > :last-child {
+#snzlysznmw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rjvwlcccim .gt_row {
+#snzlysznmw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1031,7 +1037,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#rjvwlcccim .gt_stub {
+#snzlysznmw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1044,7 +1050,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rjvwlcccim .gt_stub_row_group {
+#snzlysznmw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1058,15 +1064,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#rjvwlcccim .gt_row_group_first td {
+#snzlysznmw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rjvwlcccim .gt_row_group_first th {
+#snzlysznmw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rjvwlcccim .gt_summary_row {
+#snzlysznmw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1076,16 +1082,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rjvwlcccim .gt_first_summary_row {
+#snzlysznmw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_first_summary_row.thick {
+#snzlysznmw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rjvwlcccim .gt_last_summary_row {
+#snzlysznmw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1095,7 +1101,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_grand_summary_row {
+#snzlysznmw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1105,7 +1111,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rjvwlcccim .gt_first_grand_summary_row {
+#snzlysznmw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1115,7 +1121,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_last_grand_summary_row_top {
+#snzlysznmw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1125,11 +1131,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_striped {
+#snzlysznmw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rjvwlcccim .gt_table_body {
+#snzlysznmw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1138,7 +1144,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_footnotes {
+#snzlysznmw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1152,7 +1158,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_footnote {
+#snzlysznmw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1161,7 +1167,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rjvwlcccim .gt_sourcenotes {
+#snzlysznmw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1175,7 +1181,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#rjvwlcccim .gt_sourcenote {
+#snzlysznmw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1183,72 +1189,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#rjvwlcccim .gt_left {
+#snzlysznmw .gt_left {
   text-align: left;
 }
 
-#rjvwlcccim .gt_center {
+#snzlysznmw .gt_center {
   text-align: center;
 }
 
-#rjvwlcccim .gt_right {
+#snzlysznmw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rjvwlcccim .gt_font_normal {
+#snzlysznmw .gt_font_normal {
   font-weight: normal;
 }
 
-#rjvwlcccim .gt_font_bold {
+#snzlysznmw .gt_font_bold {
   font-weight: bold;
 }
 
-#rjvwlcccim .gt_font_italic {
+#snzlysznmw .gt_font_italic {
   font-style: italic;
 }
 
-#rjvwlcccim .gt_super {
+#snzlysznmw .gt_super {
   font-size: 65%;
 }
 
-#rjvwlcccim .gt_footnote_marks {
+#snzlysznmw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rjvwlcccim .gt_asterisk {
+#snzlysznmw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rjvwlcccim .gt_indent_1 {
+#snzlysznmw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rjvwlcccim .gt_indent_2 {
+#snzlysznmw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rjvwlcccim .gt_indent_3 {
+#snzlysznmw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rjvwlcccim .gt_indent_4 {
+#snzlysznmw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rjvwlcccim .gt_indent_5 {
+#snzlysznmw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rjvwlcccim .katex-display {
+#snzlysznmw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rjvwlcccim div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#snzlysznmw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1265,8 +1271,8 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header gt_col_headings">
 <th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
 <th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Overall</strong><br> N = 108<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Post Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Pre Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Pre Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Post Transplant</strong><br> N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
 <th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
 </tr>
 </thead>
@@ -1284,40 +1290,40 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Active Surveillance</td>
 <td class="gt_row gt_center" headers="stat_0">5 (4.6%)</td>
-<td class="gt_row gt_center" headers="stat_1">4 (7.4%)</td>
-<td class="gt_row gt_center" headers="stat_2">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_1">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_2">4 (7.4%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Cryoablation</td>
 <td class="gt_row gt_center" headers="stat_0">12 (11%)</td>
-<td class="gt_row gt_center" headers="stat_1">7 (13%)</td>
-<td class="gt_row gt_center" headers="stat_2">5 (9.3%)</td>
+<td class="gt_row gt_center" headers="stat_1">5 (9.3%)</td>
+<td class="gt_row gt_center" headers="stat_2">7 (13%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Immunotherapy</td>
 <td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
-<td class="gt_row gt_center" headers="stat_1">2 (3.7%)</td>
-<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_2">2 (3.7%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Nephrectomy</td>
 <td class="gt_row gt_center" headers="stat_0">86 (80%)</td>
-<td class="gt_row gt_center" headers="stat_1">41 (76%)</td>
-<td class="gt_row gt_center" headers="stat_2">45 (83%)</td>
+<td class="gt_row gt_center" headers="stat_1">45 (83%)</td>
+<td class="gt_row gt_center" headers="stat_2">41 (76%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown/Unspecified</td>
 <td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
-<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
-<td class="gt_row gt_center" headers="stat_2">3 (5.6%)</td>
+<td class="gt_row gt_center" headers="stat_1">3 (5.6%)</td>
+<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -1334,64 +1340,64 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Benign</td>
 <td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
-<td class="gt_row gt_center" headers="stat_1">2 (3.7%)</td>
-<td class="gt_row gt_center" headers="stat_2">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_1">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_2">2 (3.7%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Chromophobe</td>
 <td class="gt_row gt_center" headers="stat_0">4 (3.7%)</td>
-<td class="gt_row gt_center" headers="stat_1">3 (5.6%)</td>
-<td class="gt_row gt_center" headers="stat_2">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_1">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_2">3 (5.6%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Clear Cell</td>
 <td class="gt_row gt_center" headers="stat_0">38 (35%)</td>
-<td class="gt_row gt_center" headers="stat_1">17 (31%)</td>
-<td class="gt_row gt_center" headers="stat_2">21 (39%)</td>
+<td class="gt_row gt_center" headers="stat_1">21 (39%)</td>
+<td class="gt_row gt_center" headers="stat_2">17 (31%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Cystic</td>
 <td class="gt_row gt_center" headers="stat_0">5 (4.6%)</td>
-<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
-<td class="gt_row gt_center" headers="stat_2">5 (9.3%)</td>
+<td class="gt_row gt_center" headers="stat_1">5 (9.3%)</td>
+<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Oncocytic/Sarcomatoid</td>
 <td class="gt_row gt_center" headers="stat_0">5 (4.6%)</td>
-<td class="gt_row gt_center" headers="stat_1">4 (7.4%)</td>
-<td class="gt_row gt_center" headers="stat_2">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_1">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_2">4 (7.4%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Papillary</td>
 <td class="gt_row gt_center" headers="stat_0">40 (37%)</td>
-<td class="gt_row gt_center" headers="stat_1">22 (41%)</td>
-<td class="gt_row gt_center" headers="stat_2">18 (33%)</td>
+<td class="gt_row gt_center" headers="stat_1">18 (33%)</td>
+<td class="gt_row gt_center" headers="stat_2">22 (41%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unclassified</td>
 <td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
-<td class="gt_row gt_center" headers="stat_1">2 (3.7%)</td>
-<td class="gt_row gt_center" headers="stat_2">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_1">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_2">2 (3.7%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown/Unspecified</td>
 <td class="gt_row gt_center" headers="stat_0">10 (9.3%)</td>
-<td class="gt_row gt_center" headers="stat_1">4 (7.4%)</td>
-<td class="gt_row gt_center" headers="stat_2">6 (11%)</td>
+<td class="gt_row gt_center" headers="stat_1">6 (11%)</td>
+<td class="gt_row gt_center" headers="stat_2">4 (7.4%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -1408,24 +1414,24 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;G1</td>
 <td class="gt_row gt_center" headers="stat_0">15 (14%)</td>
-<td class="gt_row gt_center" headers="stat_1">12 (22%)</td>
-<td class="gt_row gt_center" headers="stat_2">3 (5.6%)</td>
+<td class="gt_row gt_center" headers="stat_1">3 (5.6%)</td>
+<td class="gt_row gt_center" headers="stat_2">12 (22%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;G2</td>
 <td class="gt_row gt_center" headers="stat_0">28 (26%)</td>
-<td class="gt_row gt_center" headers="stat_1">18 (33%)</td>
-<td class="gt_row gt_center" headers="stat_2">10 (19%)</td>
+<td class="gt_row gt_center" headers="stat_1">10 (19%)</td>
+<td class="gt_row gt_center" headers="stat_2">18 (33%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;G3</td>
 <td class="gt_row gt_center" headers="stat_0">11 (10%)</td>
-<td class="gt_row gt_center" headers="stat_1">6 (11%)</td>
-<td class="gt_row gt_center" headers="stat_2">5 (9.3%)</td>
+<td class="gt_row gt_center" headers="stat_1">5 (9.3%)</td>
+<td class="gt_row gt_center" headers="stat_2">6 (11%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -1440,8 +1446,8 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown/Unspecified</td>
 <td class="gt_row gt_center" headers="stat_0">52 (48%)</td>
-<td class="gt_row gt_center" headers="stat_1">17 (31%)</td>
-<td class="gt_row gt_center" headers="stat_2">35 (65%)</td>
+<td class="gt_row gt_center" headers="stat_1">35 (65%)</td>
+<td class="gt_row gt_center" headers="stat_2">17 (31%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -1458,40 +1464,40 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;T1</td>
 <td class="gt_row gt_center" headers="stat_0">84 (78%)</td>
-<td class="gt_row gt_center" headers="stat_1">40 (74%)</td>
-<td class="gt_row gt_center" headers="stat_2">44 (81%)</td>
+<td class="gt_row gt_center" headers="stat_1">44 (81%)</td>
+<td class="gt_row gt_center" headers="stat_2">40 (74%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;T2</td>
 <td class="gt_row gt_center" headers="stat_0">6 (5.6%)</td>
-<td class="gt_row gt_center" headers="stat_1">5 (9.3%)</td>
-<td class="gt_row gt_center" headers="stat_2">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_1">1 (1.9%)</td>
+<td class="gt_row gt_center" headers="stat_2">5 (9.3%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;T3</td>
 <td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
-<td class="gt_row gt_center" headers="stat_1">3 (5.6%)</td>
-<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_2">3 (5.6%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;T4</td>
 <td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
-<td class="gt_row gt_center" headers="stat_1">1 (1.9%)</td>
-<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
+<td class="gt_row gt_center" headers="stat_2">1 (1.9%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown/Unspecified</td>
 <td class="gt_row gt_center" headers="stat_0">14 (13%)</td>
-<td class="gt_row gt_center" headers="stat_1">5 (9.3%)</td>
-<td class="gt_row gt_center" headers="stat_2">9 (17%)</td>
+<td class="gt_row gt_center" headers="stat_1">9 (17%)</td>
+<td class="gt_row gt_center" headers="stat_2">5 (9.3%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
@@ -1509,8 +1515,527 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
+<section id="survival-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="survival-analysis">Survival Analysis:</h2>
+<section id="kaplan-meier-curves" class="level3">
+<h3 class="anchored" data-anchor-id="kaplan-meier-curves">Kaplan-Meier Curves:</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/DX_Died_KM-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="univariable-cox-regression" class="level3">
+<h3 class="anchored" data-anchor-id="univariable-cox-regression">Univariable Cox Regression:</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="rqmbnrgund" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rqmbnrgund table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rqmbnrgund thead, #rqmbnrgund tbody, #rqmbnrgund tfoot, #rqmbnrgund tr, #rqmbnrgund td, #rqmbnrgund th {
+  border-style: none;
+}
+
+#rqmbnrgund p {
+  margin: 0;
+  padding: 0;
+}
+
+#rqmbnrgund .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#rqmbnrgund .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#rqmbnrgund .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#rqmbnrgund .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#rqmbnrgund .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#rqmbnrgund .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#rqmbnrgund .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#rqmbnrgund .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#rqmbnrgund .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#rqmbnrgund .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#rqmbnrgund .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#rqmbnrgund .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#rqmbnrgund .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#rqmbnrgund .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#rqmbnrgund .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rqmbnrgund .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#rqmbnrgund .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#rqmbnrgund .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#rqmbnrgund .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rqmbnrgund .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#rqmbnrgund .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rqmbnrgund .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#rqmbnrgund .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rqmbnrgund .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rqmbnrgund .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rqmbnrgund .gt_left {
+  text-align: left;
+}
+
+#rqmbnrgund .gt_center {
+  text-align: center;
+}
+
+#rqmbnrgund .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#rqmbnrgund .gt_font_normal {
+  font-weight: normal;
+}
+
+#rqmbnrgund .gt_font_bold {
+  font-weight: bold;
+}
+
+#rqmbnrgund .gt_font_italic {
+  font-style: italic;
+}
+
+#rqmbnrgund .gt_super {
+  font-size: 65%;
+}
+
+#rqmbnrgund .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#rqmbnrgund .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#rqmbnrgund .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#rqmbnrgund .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#rqmbnrgund .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#rqmbnrgund .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#rqmbnrgund .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#rqmbnrgund .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#rqmbnrgund div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>HR</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="conf.low" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">RCC Diagnosis</td>
+<td class="gt_row gt_center" headers="estimate"><br>
+</td>
+<td class="gt_row gt_center" headers="conf.low"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Pre Transplant</td>
+<td class="gt_row gt_center" headers="estimate">—</td>
+<td class="gt_row gt_center" headers="conf.low">—</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Post Transplant</td>
+<td class="gt_row gt_center" headers="estimate">2.78</td>
+<td class="gt_row gt_center" headers="conf.low">0.97, 7.97</td>
+<td class="gt_row gt_center" headers="p.value">0.058</td>
+</tr>
+</tbody><tfoot class="gt_footnotes">
+<tr class="even">
+<td colspan="4" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> HR = Hazard Ratio, CI = Confidence Interval</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
